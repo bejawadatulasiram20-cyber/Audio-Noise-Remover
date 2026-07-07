@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audio Noise Remover</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="card">
+    <h1>🎧 Audio Noise Remover</h1>
+    <p>Upload a noisy audio file to clean it up.</p>
+
+    <div class="drop-zone" id="dropZone">
+        <p>📂 Drag & Drop Audio Here<br>or Click to Browse</p>
+        <input type="file" id="fileInput" accept="audio/*">
+    </div>
+
+    <div id="fileName"></div>
+
+    <audio id="preview" controls style="display:none;"></audio>
+
+    <button id="uploadBtn" disabled>
+        Upload & Process
+    </button>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
